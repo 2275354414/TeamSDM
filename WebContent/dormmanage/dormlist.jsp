@@ -108,8 +108,8 @@
 
 	//保存
 	function saveUser() {
-		var dorm_building = $("#dorm_building").combobox('getValue');
-		var building_name = $("#dorm_building").combobox('getText');
+		//var dorm_building = $("#dorm_building").combobox('getValue');
+		//var building_name = $("#dorm_building").combobox('getText');
 		//var dorm_building = "6";
 		//var building_name = "533";
 		$("#fm").form("submit", {
