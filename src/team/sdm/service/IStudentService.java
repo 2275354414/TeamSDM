@@ -10,9 +10,6 @@ import team.sdm.po.Student_lack;
 public interface IStudentService {
 
 	boolean deleteStudentAndStudentDorm(long student_id);
-
-	int StudentCount();
-
 	List<StudentVo> studentList(StudentVo vo, int page, int rows);
 
 	StudentVo findStudent(StudentVo vo);
@@ -50,5 +47,7 @@ public interface IStudentService {
 	int changeStudentDorm(long dorm_id, long student_id);
 
 	int changeStudentByChangeDorm(long student_id, long building_id, long dorm_id, String remark);
+
+	int StudentCount(StudentVo vo);
 
 }

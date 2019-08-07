@@ -35,8 +35,6 @@ public interface StudentMapper {
 			@Param("rows") int rows);
 
 	StudentVo findStudent(StudentVo vo);
-	
-	int studentCount();
 
 	boolean addStudent(StudentVo vo);
 
@@ -58,4 +56,6 @@ public interface StudentMapper {
 	int changeStudentDorm(long dorm_id, long student_id);
 
 	int changeStudentByChangeDorm(long student_id, long building_id, long dorm_id, String remark);
+
+	int studentCount(StudentVo vo);
 }

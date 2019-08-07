@@ -85,8 +85,8 @@ public class StudentService implements IStudentService {
 	}
 
 	@Override
-	public int StudentCount() {
-		return studentMapper.studentCount();
+	public int StudentCount(StudentVo vo) {
+		return studentMapper.studentCount(vo);
 	}
 
 	@Override

@@ -56,10 +56,9 @@ public class StudentController {
 		vo.setStudent_institution(("".equals(s_institution) ? null : s_institution));
 		vo.setStudent_class(("".equals(s_class) ? null : s_class));
 		vo.setStudent_name(("".equals(s_name) ? null : s_name));
-
+		int total = studentService.StudentCount(vo);
 		List<StudentVo> studentVo = studentService.studentList(vo, (page - 1) * rows, rows);
-		int total = studentService.StudentCount();
-
+		
 		JSONObject obj = new JSONObject();
 		obj.put("total", total);
 

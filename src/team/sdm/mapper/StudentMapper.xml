@@ -115,10 +115,12 @@
 			and student_id = #{student_id}
 		</if>
 		<if test="student_name!=null">
-			and student_name = #{student_name}
+			and student_name like CONCAT('%',
+			#{student_name}, '%')
 		</if>
 		<if test="student_class!=null">
-			and student_class = #{student_class}
+			and student_class like CONCAT('%',
+			#{student_class}, '%')
 		</if>
 		<if test="student_phone!=null">
 			and student_phone = #{student_phone}
@@ -195,8 +197,67 @@
 		</if>
 	</select>
 	<select id="studentCount" resultType="Integer">
-		select count(*) from
-		student
+		select count(*) from student where 1 = 1
+		<if test="student_id!=null">
+			and student_id = #{student_id}
+		</if>
+		<if test="student_name!=null">
+			and student_name like CONCAT('%',
+			#{student_name}, '%')
+		</if>
+		<if test="student_class!=null">
+			and student_class like CONCAT('%',
+			#{student_class}, '%')
+		</if>
+		<if test="student_phone!=null">
+			and student_phone = #{student_phone}
+		</if>
+		<if test="student_remark!=null">
+			and student_remark = #{student_remark}
+		</if>
+		<if test="student_sex!=null">
+			and student_sex = #{student_sex}
+		</if>
+
+		<if test="student_state!=null">
+			and student_state = #{student_state}
+		</if>
+		<if test="student_userName!=null">
+			and student_userName = #{student_userName}
+		</if>
+		<if test="student_userPass!=null">
+			and student_userPass = #{student_userPass}
+		</if>
+		<if test="out_date!=null">
+			and out_date = #{out_date}
+		</if>
+		<if test="student_institution!=null">
+			and student_institution = #{student_institution}
+		</if>
+		<if test="student_major!=null">
+			and student_major = #{student_major}
+		</if>
+		<if test="student_building!=null">
+			and student_building = #{student_building}
+		</if>
+		<if test="student_dorm!=null">
+			and student_dorm = #{student_dorm}
+		</if>
+		<if test="student_lackFlag!=null">
+			and student_lackFlag = #{student_lackFlag}
+		</if>
+		<if test="student_lackBeginTime!=null">
+			and student_lackBeginTime = #{student_lackBeginTime}
+		</if>
+		<if test="student_lackEndTime!=null">
+			and student_lackEndTime = #{student_lackEndTime}
+		</if>
+		<if test="student_headFlag!=null">
+			and student_headFlag = #{student_headFlag}
+		</if>
+		<if test="student_ifOk!=null">
+			and student_ifOk= #{student_ifOk}
+		</if>
 	</select>
 
 	<select id="studentLackList" resultType="team.sdm.po.StudentVo">
