@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -318,7 +318,7 @@
 		  });
 		  
 		  var treeApplyDateStudent=[{
-				text:"宿舍调换申请",
+				text:"学生申请",
 				iconCls:"icon-studentApply1",
 				attributes:{
 					url:"studentmanage/changeApply.jsp"
